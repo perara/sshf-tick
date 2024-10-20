@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "sshf_flott"
+version = "0.1.0"
+description = "A Python project for SSHF Flott"
+authors = ["Per-Arne <per@sysx.no>"]
+packages = [
+    { include = "sshf_flott", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fhiry = "*"
+pydantic = "*"
+opencv-python-headless = "*"
+numpy = "*"
+tensorflow = "2.17.0"
+mahotas = "*"
+gdown = "*"
+matplotlib = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+runner = "sshf_flott.runner:main"
+
+[tool.poetry.dependencies.deepskin]
+git = "https://github.com/Nico-Curti/Deepskin.git"
